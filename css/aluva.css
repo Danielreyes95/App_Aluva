@@ -1412,3 +1412,329 @@ hr {
     }
 
 }
+/* =========================================================
+   FLECHAS CARRUSEL TESTIMONIOS
+   ========================================================= */
+
+.carousel-testimonial {
+    position: relative;
+}
+
+
+/* Botones anterior / siguiente */
+
+.carousel-testimonial .owl-nav .owl-prev,
+.carousel-testimonial .owl-nav .owl-next {
+    position: absolute;
+
+    top: 50%;
+
+    width: 46px;
+    height: 46px;
+
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+
+    transform: translateY(-50%);
+
+    background-color: rgba(0, 0, 0, 0.20) !important;
+
+    border: 1px solid #777777 !important;
+    border-radius: 50% !important;
+
+    color: #ffffff !important;
+
+    font-size: 0 !important;
+
+    transition: 0.3s ease;
+}
+
+
+/* Posición */
+
+.carousel-testimonial .owl-nav .owl-prev {
+    left: 8px;
+}
+
+.carousel-testimonial .owl-nav .owl-next {
+    right: 8px;
+}
+
+
+/* Oculta el icono original que aparece como cuadrado */
+
+.carousel-testimonial .owl-nav .owl-prev *,
+.carousel-testimonial .owl-nav .owl-next * {
+    display: none !important;
+}
+
+
+/* Flecha izquierda */
+
+.carousel-testimonial .owl-nav .owl-prev::before {
+    content: "\2039";
+
+    font-family: Arial, sans-serif;
+
+    font-size: 34px;
+    line-height: 1;
+
+    color: #ffffff;
+}
+
+
+/* Flecha derecha */
+
+.carousel-testimonial .owl-nav .owl-next::before {
+    content: "\203A";
+
+    font-family: Arial, sans-serif;
+
+    font-size: 34px;
+    line-height: 1;
+
+    color: #ffffff;
+}
+
+
+/* Hover */
+
+.carousel-testimonial .owl-nav .owl-prev:hover,
+.carousel-testimonial .owl-nav .owl-next:hover {
+    background-color: #f5a623 !important;
+
+    border-color: #f5a623 !important;
+}
+
+
+/* Móvil */
+
+@media (max-width: 767px) {
+
+    .carousel-testimonial .owl-nav .owl-prev,
+    .carousel-testimonial .owl-nav .owl-next {
+        width: 38px;
+        height: 38px;
+    }
+
+    .carousel-testimonial .owl-nav .owl-prev::before,
+    .carousel-testimonial .owl-nav .owl-next::before {
+        font-size: 28px;
+    }
+
+}
+
+/* =========================================================
+   CONTACTO - AJUSTE COMPACTO DE ESCRITORIO
+   ========================================================= */
+
+@media (min-width: 992px) {
+
+    /* Sección */
+
+    #contacto {
+        padding-top: 32px !important;
+        padding-bottom: 28px !important;
+    }
+
+
+    /* Encabezado */
+
+    #contacto .center-title {
+        margin-bottom: 24px !important;
+    }
+
+    #contacto .center-title .aluva-etiqueta {
+        margin-bottom: 5px;
+    }
+
+    #contacto .center-title h3 {
+        margin-bottom: 8px;
+
+        font-size: 30px;
+    }
+
+    #contacto .contacto-descripcion {
+        font-size: 15px;
+
+        line-height: 1.4;
+    }
+
+
+    /* Elimina margen inferior de las columnas */
+
+    #contacto .col-lg-5,
+    #contacto .col-lg-7 {
+        margin-bottom: 0 !important;
+    }
+
+
+    /* =====================================================
+       TARJETA IZQUIERDA
+       ===================================================== */
+
+    .contacto-info {
+        padding: 22px 24px;
+    }
+
+    .contacto-info h4 {
+        margin-bottom: 5px;
+
+        font-size: 24px;
+    }
+
+    .contacto-info > p {
+        margin-bottom: 15px;
+
+        font-size: 14px;
+
+        line-height: 1.45;
+    }
+
+
+    /* Datos */
+
+    .contacto-item {
+        margin-bottom: 10px;
+
+        align-items: center;
+    }
+
+    .contacto-icono {
+        width: 34px;
+        min-width: 34px;
+
+        margin-right: 8px;
+
+        font-size: 19px;
+    }
+
+    .contacto-item span {
+        margin-bottom: 0;
+
+        font-size: 14px;
+    }
+
+    .contacto-item p {
+        font-size: 13px;
+    }
+
+
+    /* Catálogo */
+
+    .contacto-info .mt30,
+    .contacto-catalogo {
+        margin-top: 12px !important;
+    }
+
+    .contacto-info .btn {
+        padding-top: 9px;
+        padding-bottom: 9px;
+    }
+
+
+    /* =====================================================
+       FORMULARIO
+       ===================================================== */
+
+    .formulario-aluva {
+        padding: 22px 24px;
+    }
+
+    .formulario-aluva h4 {
+        margin-bottom: 14px !important;
+
+        font-size: 20px;
+    }
+
+
+    /* Convierte el formulario en grid */
+
+    #form-contacto {
+        display: grid;
+
+        grid-template-columns: 1fr 1fr;
+
+        column-gap: 16px;
+    }
+
+
+    /* Menos espacio entre campos */
+
+    #form-contacto .form-group {
+        margin-bottom: 8px;
+    }
+
+
+    /*
+       Nombre = columna 1
+       Correo = columna 2
+       Asunto y Mensaje = ancho completo
+    */
+
+    #form-contacto .form-group:nth-of-type(3),
+    #form-contacto .form-group:nth-of-type(4) {
+        grid-column: 1 / -1;
+    }
+
+
+    /* Botón ancho completo de la grilla,
+       pero conservando su tamaño */
+
+    #form-contacto > button {
+        grid-column: 1 / -1;
+
+        justify-self: start;
+
+        margin-top: 2px;
+    }
+
+
+    /* Resultado validación */
+
+    #resultado-formulario {
+        grid-column: 1 / -1;
+    }
+
+
+    /* Labels */
+
+    .formulario-aluva label {
+        margin-bottom: 4px;
+
+        font-size: 13px;
+    }
+
+
+    /* Inputs */
+
+    .formulario-aluva .form-control {
+        min-height: 40px;
+
+        padding: 7px 11px;
+
+        font-size: 14px;
+    }
+
+
+    /* Mensaje */
+
+    .formulario-aluva textarea.form-control {
+        min-height: 82px;
+
+        height: 82px;
+    }
+
+
+    /* Errores */
+
+    .mensaje-error {
+        min-height: 12px;
+
+        margin-top: 2px;
+
+        font-size: 11px;
+    }
+
+}
