@@ -1,163 +1,1414 @@
 /* =========================================================
-   AJUSTE GLOBAL DE ESCALA VISUAL
-   Hace el sitio más compacto sin afectar legibilidad
+   ALUVA
+   Personalización Template Startup Dark
+   Evaluación N°3 - Diseño Web
    ========================================================= */
 
 
-/* Espaciados grandes heredados del template */
+/* =========================================================
+   1. CONFIGURACIÓN GENERAL
+   ========================================================= */
 
-main .pt100,
-main .pt90 {
-    padding-top: 60px !important;
+html {
+    scroll-behavior: smooth;
 }
 
-main .pb100,
-main .pb90 {
-    padding-bottom: 60px !important;
-}
-
-main .pt70 {
-    padding-top: 50px !important;
-}
-
-main .pb70 {
-    padding-bottom: 50px !important;
-}
-
-main .pt60,
-main .pt50 {
-    padding-top: 40px !important;
-}
-
-main .pb60,
-main .pb50 {
-    padding-bottom: 40px !important;
-}
-
-main .pb40 {
-    padding-bottom: 30px !important;
+body {
+    overflow-x: hidden;
+    background-color: #202020;
 }
 
 
-/* Títulos principales de cada sección */
+/* Color principal ALUVA */
+
+.text-primary {
+    color: #f5a623 !important;
+}
+
+
+/* Línea divisoria */
+
+hr {
+    margin: 0;
+    border-top: 1px solid #333333;
+}
+
+
+/* =========================================================
+   2. TÍTULOS DE SECCIÓN
+   ========================================================= */
 
 .center-title h3 {
-    font-size: 32px !important;
+    color: #ffffff !important;
+    font-size: 32px;
     line-height: 1.2;
 }
 
 
-/* Menos separación bajo encabezados */
+/* Línea y punto decorativo del template */
 
-.center-title {
+.center-title::after,
+.center-title h3::after,
+.center-title h3::before {
+    background-color: #f5a623 !important;
+    border-color: #f5a623 !important;
+}
+
+
+/* =========================================================
+   3. NAVEGACIÓN
+   ========================================================= */
+
+.navbar {
+    background-color: #0d0d0d !important;
+}
+
+
+/* Logo */
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+}
+
+.logo-aluva {
+    width: 110px;
+    height: auto;
+    max-height: 52px;
+    object-fit: contain;
+}
+
+
+/* Links */
+
+.navbar .nav-link {
+    transition: color 0.3s ease;
+}
+
+.navbar .nav-link:hover {
+    color: #f5a623 !important;
+}
+
+.navbar .nav-item.active .nav-link {
+    color: #f5a623 !important;
+}
+
+
+/* =========================================================
+   4. BOTÓN CATÁLOGO
+   ========================================================= */
+
+.boton-catalogo {
+    background-color: #f5a623 !important;
+    border-color: #f5a623 !important;
+    color: #111111 !important;
+}
+
+.boton-catalogo:hover,
+.boton-catalogo:focus {
+    background-color: #d98b12 !important;
+    border-color: #d98b12 !important;
+    color: #111111 !important;
+}
+
+
+/* =========================================================
+   5. HERO ALUVA
+   ========================================================= */
+
+.hero-aluva {
+    position: relative;
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+/* Capa oscura sobre imagen */
+
+.hero-aluva::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background-color: rgba(0, 0, 0, 0.58);
+}
+
+
+/* Contenido sobre la capa */
+
+.hero-aluva .d-flex {
+    position: relative;
+    z-index: 1;
+}
+
+
+/* Título */
+
+.hero-aluva h1 {
+    color: #ffffff;
+}
+
+
+/* Descripción */
+
+.hero-aluva .lead {
+    color: #eeeeee;
+}
+
+
+/* Etiquetas amarillas */
+
+.aluva-etiqueta {
+    margin-bottom: 12px;
+
+    color: #f5a623;
+
+    font-size: 13px;
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+    text-transform: uppercase;
+}
+
+
+/* =========================================================
+   6. BOTÓN PRINCIPAL
+   ========================================================= */
+
+.boton-aluva {
+    background-color: #f5a623 !important;
+    border-color: #f5a623 !important;
+
+    color: #111111 !important;
+}
+
+.boton-aluva:hover,
+.boton-aluva:focus {
+    background-color: #d98b12 !important;
+    border-color: #d98b12 !important;
+
+    color: #111111 !important;
+}
+
+
+/* Separación de botones solo en Hero */
+
+.hero-aluva .boton-aluva {
+    margin-right: 10px;
+}
+
+
+/* =========================================================
+   7. ANCLAS
+   ========================================================= */
+
+#inicio,
+#nosotros,
+#productos,
+#soluciones,
+#testimonios,
+#terreno,
+#contacto {
+    scroll-margin-top: 80px;
+}
+
+
+/* =========================================================
+   8. NOSOTROS
+   ========================================================= */
+
+#nosotros {
+    padding-top: 60px !important;
+    padding-bottom: 45px !important;
+}
+
+
+/* Menos espacio bajo el encabezado */
+
+#nosotros .center-title {
+    margin-bottom: 32px !important;
+}
+
+
+.aluva-info-card {
+    height: 100%;
+
+    padding: 24px;
+
+    background-color: #252525;
+
+    border: 1px solid #353535;
+    border-top: 4px solid #f5a623;
+
+    border-radius: 6px;
+}
+
+.aluva-info-card h4 {
+    color: #ffffff;
+}
+
+.aluva-info-card p {
+    margin-bottom: 0;
+
+    color: #aaaaaa;
+}
+
+
+/* =========================================================
+   9. PRODUCTOS
+   ========================================================= */
+
+#productos {
+    padding-top: 55px !important;
+}
+
+
+/* Encabezado */
+
+#productos .center-title {
     margin-bottom: 35px !important;
 }
 
 
-/* Descripciones generales */
+.productos-descripcion {
+    max-width: 700px;
 
-.productos-descripcion,
-.soluciones-descripcion,
-.testimonios-descripcion,
-.terreno-descripcion,
-.contacto-descripcion {
+    margin: 0 auto 28px;
+
+    color: #aaaaaa;
+
     font-size: 16px;
 }
 
 
-/* Tarjetas algo más compactas */
+/* =========================================================
+   10. FILTROS DE PRODUCTOS
+   ========================================================= */
 
-.aluva-info-card,
-.solucion-card {
-    padding: 22px;
+#js-filters-mosaic-flat {
+    padding-left: 15px;
+    padding-right: 15px;
+
+    margin-bottom: 30px;
 }
 
 
-/* Productos un poco más bajos */
+.cbp-l-filters-buttonCenter .cbp-filter-item {
+    margin-bottom: 10px;
+
+    transition:
+        color 0.3s ease,
+        border-color 0.3s ease;
+}
+
+
+.cbp-l-filters-buttonCenter .cbp-filter-item-active {
+    color: #f5a623 !important;
+
+    border-color: #f5a623 !important;
+}
+
+
+.cbp-l-filters-buttonCenter .cbp-filter-item:hover {
+    color: #f5a623 !important;
+
+    border-color: #f5a623 !important;
+}
+
+
+/* =========================================================
+   11. GRID DE PRODUCTOS
+   ========================================================= */
+
+#js-grid-mosaic-flat {
+    max-width: 1400px;
+
+    margin: 0 auto;
+}
+
+
+/* Tarjeta */
+
+#js-grid-mosaic-flat .cbp-item {
+    background-color: #ffffff;
+}
+
+
+/* Contenedor imagen */
 
 #js-grid-mosaic-flat .cbp-caption-defaultWrap {
-    height: 260px !important;
+    height: 275px !important;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
+
+    background-color: #ffffff;
+
+    border-radius: 6px;
 }
 
 
-/* ALUVA en terreno */
+/* Imagen */
 
-.imagen-terreno {
-    height: 235px;
+#js-grid-mosaic-flat .cbp-caption-defaultWrap img {
+    width: 100% !important;
+    height: 100% !important;
+
+    padding: 16px;
+
+    object-fit: contain;
 }
 
 
-/* Testimonios */
+/* Overlay */
+
+#js-grid-mosaic-flat .cbp-caption-activeWrap {
+    background-color: rgba(0, 0, 0, 0.68);
+}
+
+
+/* Título producto */
+
+.cbp-l-caption-title {
+    color: #ffffff;
+
+    font-size: 18px;
+    font-weight: 700;
+}
+
+
+/* Zona catálogo */
+
+#productos .container.text-center {
+    padding-top: 35px !important;
+    padding-bottom: 45px !important;
+}
+
+
+/* =========================================================
+   12. SOLUCIONES ALUVA
+   ========================================================= */
+
+#soluciones {
+    padding-top: 55px !important;
+    padding-bottom: 35px !important;
+}
+
+
+#soluciones .center-title {
+    margin-bottom: 35px !important;
+}
+
+
+.soluciones-descripcion {
+    max-width: 760px;
+
+    margin: 0 auto;
+
+    color: #aaaaaa;
+
+    font-size: 16px;
+}
+
+
+/* Tarjeta */
+
+.solucion-card {
+    height: 100%;
+
+    padding: 22px;
+
+    background-color: #252525;
+
+    border: 1px solid #353535;
+
+    border-radius: 6px;
+
+    transition:
+        transform 0.3s ease,
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+/* Hover */
+
+.solucion-card:hover {
+    border-color: #f5a623;
+
+    transform: translateY(-4px);
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+}
+
+
+/* Iconos */
+
+.solucion-card .icon i {
+    color: #f5a623;
+}
+
+
+/* Títulos */
+
+.solucion-card h4 {
+    color: #ffffff;
+
+    font-weight: 600;
+}
+
+
+/* Texto */
+
+.solucion-card p {
+    margin-bottom: 0;
+
+    color: #aaaaaa;
+}
+
+
+/* =========================================================
+   13. LLAMADO A LA ACCIÓN
+   ========================================================= */
+
+.llamada-aluva {
+    padding-top: 65px !important;
+    padding-bottom: 65px !important;
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+.llamada-aluva h3 {
+    color: #ffffff;
+
+    font-size: 30px;
+    font-weight: 700;
+}
+
+
+.llamada-aluva .lead {
+    max-width: 700px;
+
+    color: #eeeeee;
+
+    font-size: 17px;
+}
+
+
+/* =========================================================
+   14. VALORES DESTACADOS
+   ========================================================= */
+
+.valores-aluva {
+    padding-top: 45px !important;
+    padding-bottom: 25px !important;
+
+    background-color: #202020;
+}
+
+
+.valor-card {
+    height: 100%;
+
+    padding: 24px 20px;
+
+    border-bottom: 3px solid transparent;
+
+    transition:
+        transform 0.3s ease,
+        border-color 0.3s ease;
+}
+
+
+.valor-card:hover {
+    border-bottom-color: #f5a623;
+
+    transform: translateY(-4px);
+}
+
+
+.valor-icono {
+    margin-bottom: 14px;
+
+    color: #f5a623;
+
+    font-size: 38px;
+}
+
+
+.valor-card h4 {
+    color: #ffffff;
+
+    font-size: 20px;
+    font-weight: 700;
+}
+
+
+.valor-card p {
+    max-width: 330px;
+
+    margin: 0 auto;
+
+    color: #aaaaaa;
+}
+
+
+/* =========================================================
+   15. TESTIMONIOS
+   ========================================================= */
+
+#testimonios {
+    padding-top: 55px !important;
+    padding-bottom: 55px !important;
+}
+
+
+#testimonios .center-title {
+    margin-bottom: 35px !important;
+}
+
+
+.testimonios-descripcion {
+    max-width: 700px;
+
+    margin: 0 auto;
+
+    color: #aaaaaa;
+
+    font-size: 16px;
+}
+
+
+/* Tarjeta */
 
 .testimonio-aluva {
     padding: 28px;
+
+    background-color: #252525;
+
+    border: 1px solid #353535;
+    border-left: 4px solid #f5a623;
+
+    border-radius: 8px;
 }
+
+
+/* Foto */
 
 .testimonio-imagen {
     width: 145px !important;
     height: 145px !important;
+
+    margin: 0 auto;
+
+    object-fit: cover;
+
+    border: 4px solid #f5a623;
 }
 
 
-/* CTA */
+/* Texto */
 
-.llamada-aluva h3 {
-    font-size: 30px;
+.testimonio-aluva .lead {
+    color: #dddddd;
+
+    font-size: 17px;
+
+    line-height: 1.6;
 }
 
 
-/* Contacto */
+/* Nombre */
 
-.contacto-aluva {
-    padding-top: 45px !important;
+.testimonio-aluva h5 {
+    margin-top: 16px;
+
+    color: #ffffff;
+
+    font-weight: 700;
+}
+
+
+/* Cargo */
+
+.testimonio-aluva h5 span {
+    display: block;
+
+    margin-top: 4px;
+
+    color: #f5a623;
+
+    font-size: 14px;
+    font-weight: 400;
+}
+
+
+/* =========================================================
+   16. ALUVA EN TERRENO
+   ========================================================= */
+
+#terreno {
+    padding-top: 55px !important;
     padding-bottom: 40px !important;
 }
 
 
+#terreno .center-title {
+    margin-bottom: 35px !important;
+}
+
+
+.terreno-descripcion {
+    max-width: 700px;
+
+    margin: 0 auto;
+
+    color: #aaaaaa;
+
+    font-size: 16px;
+}
+
+
+/* Tarjeta */
+
+.tarjeta-terreno {
+    height: 100%;
+
+    overflow: hidden;
+
+    background-color: #252525;
+
+    border: 1px solid #353535;
+
+    border-radius: 8px;
+
+    transition:
+        transform 0.3s ease,
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+/* Hover */
+
+.tarjeta-terreno:hover {
+    border-color: #f5a623;
+
+    transform: translateY(-5px);
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.30);
+}
+
+
+/* Imagen */
+
+.imagen-terreno {
+    width: 100%;
+    height: 235px;
+
+    object-fit: cover;
+}
+
+
+/* Contenido */
+
+.tarjeta-terreno .entry-content {
+    padding: 22px;
+}
+
+
+/* Título */
+
+.tarjeta-terreno .entry-title {
+    margin-bottom: 12px;
+
+    color: #ffffff;
+
+    font-weight: 700;
+}
+
+
+/* Texto */
+
+.tarjeta-terreno p {
+    margin-bottom: 0;
+
+    color: #aaaaaa;
+}
+
+
 /* =========================================================
-   TABLET
+   17. CONTACTO
+   ========================================================= */
+
+.contacto-aluva {
+    padding-top: 45px !important;
+    padding-bottom: 40px !important;
+
+    background-color: #202020;
+}
+
+
+/* Encabezado */
+
+.contacto-aluva .center-title {
+    margin-bottom: 35px !important;
+}
+
+
+.contacto-descripcion {
+    max-width: 700px;
+
+    margin: 0 auto;
+
+    color: #aaaaaa;
+
+    font-size: 16px;
+}
+
+
+/* =========================================================
+   18. INFORMACIÓN DE CONTACTO
+   ========================================================= */
+
+.contacto-info {
+    height: 100%;
+
+    padding: 26px;
+
+    background-color: #252525;
+
+    border: 1px solid #353535;
+    border-top: 4px solid #f5a623;
+
+    border-radius: 8px;
+}
+
+
+.contacto-info h4 {
+    margin-bottom: 8px;
+
+    color: #ffffff;
+
+    font-size: 25px;
+    font-weight: 700;
+}
+
+
+.contacto-info > p {
+    margin-bottom: 22px;
+
+    color: #aaaaaa;
+
+    line-height: 1.6;
+}
+
+
+/* Cada dato */
+
+.contacto-item {
+    display: flex;
+
+    align-items: flex-start;
+
+    margin-bottom: 16px;
+}
+
+
+/* Icono */
+
+.contacto-icono {
+    width: 40px;
+    min-width: 40px;
+
+    margin-right: 8px;
+
+    color: #f5a623;
+
+    font-size: 21px;
+
+    text-align: center;
+}
+
+
+.contacto-icono i {
+    color: #f5a623;
+}
+
+
+.contacto-item span {
+    display: block;
+
+    margin-bottom: 2px;
+
+    color: #ffffff;
+
+    font-size: 15px;
+    font-weight: 600;
+}
+
+
+.contacto-item p {
+    margin: 0;
+
+    color: #aaaaaa;
+
+    font-size: 14px;
+}
+
+
+.contacto-item a {
+    color: #aaaaaa;
+
+    transition: color 0.3s ease;
+}
+
+
+.contacto-item a:hover {
+    color: #f5a623;
+}
+
+
+/* =========================================================
+   19. FORMULARIO
+   ========================================================= */
+
+.formulario-aluva {
+    height: 100%;
+
+    padding: 26px;
+
+    background-color: #252525;
+
+    border: 1px solid #353535;
+
+    border-radius: 8px;
+}
+
+
+.formulario-aluva h4 {
+    margin-bottom: 20px !important;
+
+    color: #ffffff;
+
+    font-size: 21px;
+    font-weight: 700;
+}
+
+
+.formulario-aluva label {
+    margin-bottom: 6px;
+
+    color: #dddddd;
+
+    font-size: 14px;
+    font-weight: 600;
+}
+
+
+/* Separación campos */
+
+.formulario-aluva .form-group {
+    margin-bottom: 14px;
+}
+
+
+/* Inputs */
+
+.formulario-aluva .form-control {
+    min-height: 43px;
+
+    padding: 9px 13px;
+
+    color: #ffffff;
+
+    background-color: #181818;
+
+    border: 1px solid #404040;
+
+    border-radius: 5px;
+}
+
+
+/* Textarea */
+
+.formulario-aluva textarea.form-control {
+    min-height: 105px;
+
+    resize: vertical;
+}
+
+
+/* Focus */
+
+.formulario-aluva .form-control:focus {
+    color: #ffffff;
+
+    background-color: #181818;
+
+    border-color: #f5a623;
+
+    box-shadow: 0 0 0 2px rgba(245, 166, 35, 0.15);
+}
+
+
+/* Select */
+
+.formulario-aluva select.form-control option {
+    color: #ffffff;
+
+    background-color: #181818;
+}
+
+
+/* Placeholder */
+
+.formulario-aluva .form-control::placeholder {
+    color: #777777;
+}
+
+
+/* =========================================================
+   20. VALIDACIÓN FORMULARIO
+   ========================================================= */
+
+.mensaje-error {
+    display: block;
+
+    min-height: 15px;
+
+    margin-top: 3px;
+
+    color: #ff7676;
+
+    font-size: 12px;
+}
+
+
+.campo-error {
+    border-color: #ff7676 !important;
+}
+
+
+.campo-correcto {
+    border-color: #5cb85c !important;
+}
+
+
+.resultado-formulario {
+    margin-top: 12px;
+
+    font-size: 13px;
+}
+
+
+.formulario-exito {
+    padding: 10px 13px;
+
+    color: #ffffff;
+
+    background-color: rgba(92, 184, 92, 0.15);
+
+    border-left: 3px solid #5cb85c;
+
+    border-radius: 3px;
+}
+
+
+/* =========================================================
+   21. FOOTER
+   ========================================================= */
+
+.footer-aluva p {
+    max-width: 360px;
+
+    color: #aaaaaa;
+
+    line-height: 1.6;
+}
+
+
+/* Logo */
+
+.footer-logo {
+    width: 125px;
+    height: auto;
+
+    object-fit: contain;
+}
+
+
+/* Títulos */
+
+.footer.footer-dark h3 {
+    margin-bottom: 20px;
+
+    color: #ffffff;
+
+    font-size: 18px;
+    font-weight: 700;
+}
+
+
+/* Navegación */
+
+.footer-menu li {
+    margin-bottom: 8px;
+}
+
+
+.footer-menu a {
+    color: #aaaaaa;
+
+    transition:
+        color 0.3s ease,
+        padding-left 0.3s ease;
+}
+
+
+.footer-menu a:hover {
+    padding-left: 4px;
+
+    color: #f5a623;
+}
+
+
+/* Contacto footer */
+
+.footer .contact-list-item li {
+    margin-bottom: 13px;
+
+    color: #aaaaaa;
+}
+
+
+.footer .contact-list-item i {
+    margin-right: 8px;
+
+    color: #f5a623;
+}
+
+
+.footer .contact-list-item a {
+    color: #aaaaaa;
+
+    transition: color 0.3s ease;
+}
+
+
+.footer .contact-list-item a:hover {
+    color: #f5a623;
+}
+
+
+/* Parte inferior */
+
+.bottom-footer {
+    padding-top: 18px;
+    padding-bottom: 18px;
+
+    border-top: 1px solid #333333;
+}
+
+
+.footer-frase {
+    color: #888888;
+
+    font-size: 13px;
+}
+
+
+/* =========================================================
+   22. RESPONSIVE - TABLET
    ========================================================= */
 
 @media (max-width: 991px) {
 
-    main .pt100,
-    main .pt90 {
-        padding-top: 50px !important;
+    /* Menú */
+
+    .navbar-collapse {
+        margin-top: 10px;
+
+        padding: 15px 20px;
+
+        background-color: #111111;
+
+        border-radius: 6px;
     }
 
-    main .pb100,
-    main .pb90 {
-        padding-bottom: 50px !important;
+
+    .navbar .nav-link {
+        padding-top: 9px !important;
+        padding-bottom: 9px !important;
+    }
+
+
+    .boton-catalogo {
+        display: inline-block;
+
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+
+
+    /* Logo */
+
+    .logo-aluva {
+        width: 100px;
+    }
+
+
+    /* Hero */
+
+    .hero-aluva h1 {
+        font-size: 46px;
+
+        line-height: 1.15;
+    }
+
+
+    /* Productos */
+
+    #js-grid-mosaic-flat .cbp-caption-defaultWrap {
+        height: 260px !important;
     }
 
 }
 
 
 /* =========================================================
-   CELULAR
+   23. RESPONSIVE - CELULAR
    ========================================================= */
 
 @media (max-width: 767px) {
 
-    main .pt100,
-    main .pt90,
-    main .pt70 {
+    /* Logo */
+
+    .logo-aluva {
+        width: 95px;
+
+        max-height: 48px;
+    }
+
+
+    /* Hero */
+
+    .hero-aluva {
+        background-position: center;
+    }
+
+
+    .hero-aluva h1 {
+        font-size: 35px;
+
+        line-height: 1.15;
+    }
+
+
+    .hero-aluva .lead {
+        font-size: 16px;
+
+        line-height: 1.5;
+    }
+
+
+    .aluva-etiqueta {
+        font-size: 11px;
+
+        letter-spacing: 1.3px;
+    }
+
+
+    /* Hero botones */
+
+    .hero-aluva .boton-aluva {
+        margin-right: 5px;
+        margin-bottom: 10px;
+    }
+
+
+    .hero-aluva .btn-white-outline {
+        margin-bottom: 10px;
+    }
+
+
+    /* Títulos */
+
+    .center-title h3 {
+        font-size: 28px;
+    }
+
+
+    /* Espacios secciones */
+
+    #nosotros,
+    #soluciones,
+    #testimonios,
+    #terreno {
+        padding-top: 42px !important;
+        padding-bottom: 35px !important;
+    }
+
+
+    #productos {
+        padding-top: 42px !important;
+    }
+
+
+    /* Productos */
+
+    #js-grid-mosaic-flat .cbp-caption-defaultWrap {
+        height: 245px !important;
+    }
+
+
+    /* CTA */
+
+    .llamada-aluva {
+        padding-top: 50px !important;
+        padding-bottom: 50px !important;
+
+        text-align: center;
+    }
+
+
+    .llamada-aluva h3 {
+        font-size: 27px;
+    }
+
+
+    .llamada-aluva .text-right {
+        text-align: center !important;
+    }
+
+
+    /* Valores */
+
+    .valores-aluva {
+        padding-top: 35px !important;
+        padding-bottom: 20px !important;
+    }
+
+
+    /* Testimonios */
+
+    .testimonio-aluva {
+        padding: 22px 18px;
+
+        text-align: center;
+    }
+
+
+    .testimonio-imagen {
+        width: 130px !important;
+        height: 130px !important;
+
+        margin-bottom: 20px;
+    }
+
+
+    .testimonio-aluva .lead {
+        font-size: 16px;
+    }
+
+
+    /* Terreno */
+
+    .imagen-terreno {
+        height: 225px;
+    }
+
+
+    /* Contacto */
+
+    .contacto-aluva {
         padding-top: 40px !important;
+        padding-bottom: 30px !important;
     }
 
-    main .pb100,
-    main .pb90,
-    main .pb70,
-    main .pb60 {
-        padding-bottom: 40px !important;
-    }
 
-    .center-title {
+    .contacto-aluva .center-title {
         margin-bottom: 28px !important;
     }
 
-    .center-title h3 {
-        font-size: 28px !important;
+
+    .contacto-info,
+    .formulario-aluva {
+        padding: 22px;
+    }
+
+
+    /* Footer */
+
+    .bottom-footer {
+        text-align: center;
+    }
+
+
+    .footer-frase {
+        display: block;
+
+        margin-top: 10px;
+    }
+
+}
+
+
+/* =========================================================
+   24. RESPONSIVE - CELULAR PEQUEÑO
+   ========================================================= */
+
+@media (max-width: 575px) {
+
+    /* Hero */
+
+    .hero-aluva h1 {
+        font-size: 30px;
+    }
+
+
+    .hero-aluva .lead {
+        font-size: 15px;
+    }
+
+
+    /* Productos */
+
+    #js-grid-mosaic-flat .cbp-caption-defaultWrap {
+        height: 225px !important;
+    }
+
+
+    /* Tarjetas */
+
+    .aluva-info-card,
+    .solucion-card,
+    .contacto-info,
+    .formulario-aluva {
+        padding: 20px;
+    }
+
+
+    /* Botón formulario */
+
+    .formulario-aluva .btn {
+        width: 100%;
     }
 
 }
