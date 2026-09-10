@@ -35,7 +35,6 @@ hr {
 
 /* =========================================================
    TÍTULOS DE SECCIÓN
-   Corrige el azul original del template
    ========================================================= */
 
 .center-title h3 {
@@ -190,7 +189,7 @@ hr {
 }
 
 
-/* Separación específica de botones del Hero */
+/* Separación de botones del Hero */
 
 .hero-aluva .boton-aluva {
     margin-right: 10px;
@@ -257,7 +256,7 @@ hr {
 
 
 /* =========================================================
-   FILTROS
+   FILTROS DE PRODUCTOS
    ========================================================= */
 
 #js-filters-mosaic-flat {
@@ -663,8 +662,19 @@ hr {
    ========================================================= */
 
 .contacto-aluva {
+    padding-top: 60px !important;
+    padding-bottom: 60px !important;
+
     background-color: #202020;
 }
+
+
+/* Encabezado más compacto */
+
+.contacto-aluva .center-title {
+    margin-bottom: 40px !important;
+}
+
 
 .contacto-descripcion {
     max-width: 700px;
@@ -684,7 +694,7 @@ hr {
 .contacto-info {
     height: 100%;
 
-    padding: 35px;
+    padding: 28px;
 
     background-color: #252525;
 
@@ -702,7 +712,7 @@ hr {
 }
 
 .contacto-info > p {
-    margin-bottom: 35px;
+    margin-bottom: 25px;
 
     color: #aaaaaa;
 
@@ -710,28 +720,38 @@ hr {
 }
 
 
-/* Elementos */
+/* Cada dato de contacto */
 
 .contacto-item {
     display: flex;
 
     align-items: flex-start;
 
-    margin-bottom: 25px;
+    margin-bottom: 18px;
 }
 
+
+/* Iconos */
+
 .contacto-icono {
-    min-width: 45px;
+    min-width: 42px;
 
     color: #f5a623;
 
     font-size: 24px;
+
+    text-align: center;
 }
+
+.contacto-icono i {
+    color: #f5a623;
+}
+
 
 .contacto-item span {
     display: block;
 
-    margin-bottom: 4px;
+    margin-bottom: 3px;
 
     color: #ffffff;
 
@@ -762,7 +782,7 @@ hr {
 .formulario-aluva {
     height: 100%;
 
-    padding: 35px;
+    padding: 28px;
 
     background-color: #252525;
 
@@ -772,6 +792,8 @@ hr {
 }
 
 .formulario-aluva h4 {
+    margin-bottom: 22px !important;
+
     color: #ffffff;
 
     font-weight: 700;
@@ -784,10 +806,17 @@ hr {
 }
 
 
+/* Separación entre campos */
+
+.formulario-aluva .form-group {
+    margin-bottom: 17px;
+}
+
+
 /* Inputs */
 
 .formulario-aluva .form-control {
-    min-height: 48px;
+    min-height: 44px;
 
     color: #ffffff;
 
@@ -799,7 +828,7 @@ hr {
 }
 
 .formulario-aluva textarea.form-control {
-    min-height: 150px;
+    min-height: 125px;
 
     resize: vertical;
 }
@@ -977,7 +1006,7 @@ hr {
 
 @media (max-width: 991px) {
 
-    /* Menú desplegable */
+    /* Menú */
 
     .navbar-collapse {
         margin-top: 10px;
@@ -1008,6 +1037,7 @@ hr {
 
     .hero-aluva h1 {
         font-size: 48px;
+
         line-height: 1.15;
     }
 
@@ -1042,20 +1072,17 @@ hr {
         background-position: center;
     }
 
-
     .hero-aluva h1 {
         font-size: 36px;
 
         line-height: 1.15;
     }
 
-
     .hero-aluva .lead {
         font-size: 17px;
 
         line-height: 1.6;
     }
-
 
     .aluva-etiqueta {
         font-size: 12px;
@@ -1070,7 +1097,6 @@ hr {
         margin-right: 5px;
         margin-bottom: 10px;
     }
-
 
     .hero-aluva .btn-white-outline {
         margin-bottom: 10px;
@@ -1097,11 +1123,9 @@ hr {
         text-align: center;
     }
 
-
     .llamada-aluva h3 {
         font-size: 28px;
     }
-
 
     .llamada-aluva .text-right {
         text-align: center !important;
@@ -1116,14 +1140,12 @@ hr {
         text-align: center;
     }
 
-
     .testimonio-imagen {
         width: 145px !important;
         height: 145px !important;
 
         margin-bottom: 25px;
     }
-
 
     .testimonio-aluva .lead {
         font-size: 16px;
@@ -1139,9 +1161,18 @@ hr {
 
     /* Contacto */
 
+    .contacto-aluva {
+        padding-top: 45px !important;
+        padding-bottom: 45px !important;
+    }
+
+    .contacto-aluva .center-title {
+        margin-bottom: 30px !important;
+    }
+
     .contacto-info,
     .formulario-aluva {
-        padding: 25px;
+        padding: 22px;
     }
 
 
@@ -1150,7 +1181,6 @@ hr {
     .bottom-footer {
         text-align: center;
     }
-
 
     .footer-frase {
         display: block;
@@ -1173,7 +1203,6 @@ hr {
         font-size: 31px;
     }
 
-
     .hero-aluva .lead {
         font-size: 16px;
     }
@@ -1186,7 +1215,7 @@ hr {
     }
 
 
-    /* Formularios */
+    /* Formulario */
 
     .formulario-aluva .btn {
         width: 100%;
